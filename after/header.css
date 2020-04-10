@@ -1,0 +1,46 @@
+
+.hcont{
+    padding:20px;
+    background-color: grey;
+}
+
+.hcont .row .ac{
+    margin-top:22px;
+}
+
+.hcont .row .ac{
+    margin-top:20px;
+}
+.hcont .row .ah{
+    padding:2%;
+    text-align:center;
+    color:white;
+    font-family:sans-serif;
+    font-style:bold;
+    font-size:60px;
+    letter-spacing: 1px;
+    text-shadow:-2px 2px 0px black,
+                -3px 3px 0px black,
+                -4px 4px 0px black,
+                -5px 5px 0px black,
+                -6px 6px 0px black,
+                -7px 7px 0px black,
+                -8px 8px 0px black,
+                -9px 9px 0px black,
+                -10px 10px 0px black;
+}
+
+
+.hcont .rh .ad{
+    padding-left:15%;
+}
+.hcont .row .ah{
+    transform:scale(1);
+    transition: 0.3s ease all;
+  }
+  .hcont .row .ah:hover{
+    cursor:pointer;
+    transform:scale(1.06);
+    transition: 0.3s ease all;
+  }
+  

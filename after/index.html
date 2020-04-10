@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="pseudoGameBot.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>pseudoGameBot</title>  
+</head>
+<body>
+    <div class="container-fluid hcont">
+        <div class="row rh">
+            <div class="col-sm-3  ac">
+                <img width="90%" src="no.png" alt="" class="image-thumbnail ">
+            </div>
+            <div class="col-sm-6 ah">
+               <p class="JH">pseudo</p>
+		<p class="JH">GameBot</p>
+            </div>
+            <div class="col-sm-3">
+             <img width = "90%" src="logo.png" alt="" class="image-thumbnail ad"> 
+            </div>
+        </div>
+    </div> 
+    </div>    
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top Pa">
+  <a href="#" class="navbar-brand"><span><img src="logo.png" alt="" width=60 class="image-thumbnail">pseudoGameBot</span></a>
+  <button type="button" class="navbar-toggler" data-target="#menu-button" data-toggle="collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+
+  <style>
+    .button {
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    
+    .button:hover span {
+      padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    </style>
+
+
+
+</nav> <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center">What you have to do</h1><br>
+                    <h4 class="text-center"></h4>
+                    <ul><br>
+                        <li>Here a list of 30 words would be given to you.</li>
+                        <li>You have to remember as much words as you can in 1 minute.</li>
+                        <li>As soon as the time is up, the words will disappear and a link will pop up.</li>
+                        <li> click that link and fill the words from list which you can remember.</li>
+                        <br>
+                        <li><strong>Kindly do this practice in true manner.</strong></li>
+                    </ul>
+                </div>
+                
+                 
+                <div class="col-sm-12">
+                    <h2 class="text-center">
+                      <br><br>
+                      Click the <strong>START</strong> button once you are ready
+                    </h2><br>
+                   
+                    <center><button id = "button" class="button" onclick="myFunction()"><span>Start</span></button></center>
+                    
+                </div>
+                <div class="col-sm-12">
+                  
+                    <center><img src="Sample final.png" id="temp" width="100%" alt="words"></center>
+                </div>
+        </div>               
+</div>
+
+<script>
+
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() { 
+        var counter = document.getElementById("button");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds) + "<br>" +"seconds" + " left";
+        if( seconds > 0 ) {
+            setTimeout(tick, 1000);
+        } else {
+            if(mins > 1){
+                countdown(mins-1);           
+            }
+        }
+    }
+    tick();
+}
+
+
+  function myFunction() {
+    document.getElementById("temp").src = "Arcade (B.G.).png";
+    document.getElementById("button").disabled = true;
+    countdown(1)
+    setTimeout(newFunction, 60000);
+    
+  }
+
+  function newFunction() {
+    document.getElementById("temp").src = " ";
+  }
+</script>
+
+
+
+
+<br><br><br><br>
+<footer class="footer navbar-dark bg-dark"></footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+</body>
+</html>
