@@ -1,0 +1,14 @@
+.container ul>li{
+    font-size:20px;
+}
+.container p{
+    font-family: sans-serif;
+    font-size:20px;
+    padding:30px;
+    text-align:justify;
+}
+.container ul, .container p{
+    background-color: lightgray ;
+    box-shadow: 35px 35px grey;
+    border-radius:5px;
+}s
